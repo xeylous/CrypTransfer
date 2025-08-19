@@ -1,35 +1,38 @@
 import React from "react";
+import { Link } from "react-router";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-gray-400 py-6 mt-12 ">
+    <footer className="bg-black text-gray-400 py-6 mt-12">
       <div className="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between">
         
         {/* Brand */}
-        <h1 className="text-lg font-bold text-white">
-          @CrypTransfer
-        </h1>
+        <h1 className="text-lg font-bold text-white">@CrypTransfer</h1>
 
         {/* Links */}
         <div className="flex gap-6 mt-4 sm:mt-0">
-          <a
-            href="/docs"
+          {/* Internal routes use Link */}
+          <Link
+            to="/docs"
             className="hover:text-purple-400 transition-colors"
           >
             Docs
-          </a>
+          </Link>
+          {/* External link stays as <a> */}
           <a
             href="https://github.com/xeylous"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hover:text-purple-400 transition-colors"
           >
             GitHub
           </a>
-          <a
-            href="/support"
+          <Link
+            to="/support"
             className="hover:text-purple-400 transition-colors"
           >
             Support
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -40,6 +43,3 @@ export default function Footer() {
     </footer>
   );
 }
-
-
-
