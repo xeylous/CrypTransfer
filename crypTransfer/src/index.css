@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Web3-ish styling */
+:root {
+  --grad: linear-gradient(135deg, #10b98133, #2563eb33);
+}
+body {
+  background-image: radial-gradient(1200px 600px at 80% -10%, rgba(16,185,129,0.12), transparent),
+                    radial-gradient(800px 400px at 10% 110%, rgba(37,99,235,0.12), transparent);
+}
+.card {
+  @apply bg-zinc-800 backdrop-blur rounded-xl border border-white/10 p-5;
+}
+.input {
+  @apply w-full bg-zinc-700 border border-white/10 rounded-lg px-4 py-3 outline-none text-gray-100 placeholder-gray-400;
+}
+.btn {
+  @apply inline-flex items-center justify-center rounded-lg px-4 py-3 font-medium border border-white/10 bg-gradient-to-br from-gray-300/80 to-purple-600/80 hover:from-purple-500 hover:to-gray-300 hover:font-bold active:scale-[.98] transition;
+}
+.tab {
+  @apply px-4 py-2 rounded-lg border border-white/10 cursor-pointer ;
+}
+.tab-active {
+  @apply bg-white/10 shadow-glow border-slate-700 font-bold;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+.animate-slideUp {
+  animation: slideUp 0.3s ease-out;
+}
+    
