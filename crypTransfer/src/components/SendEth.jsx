@@ -88,7 +88,7 @@ export default function SendEth() {
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
           type="number"
-          step="any"
+          step="0.01"
           min="0"
           required
         />
@@ -100,3 +100,4 @@ export default function SendEth() {
     </form>
   );
 }
+
